@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'font_style.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,18 +19,30 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
           appBar: AppBar(
-            title: Text("Chesy"),
-            backgroundColor: Colors.blueAccent,
-            actions: <Widget>[
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.mail),
-                color: Colors.yellowAccent,
-              ),
-            ],
+            title: Text("My Bank"),
+            backgroundColor: Colors.lightBlueAccent,
           ),
           body: SafeArea(
-            child: Image(image: AssetImage('assets/images/a_payment.jpg')),
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/payment1.png'),
+                    height: 250,
+                  ),
+                  Text(
+                    'Hello save me',
+                    style: mainHeader,
+                  ),
+                  Text(
+                    'lets save me and you will be a rich person in the world',
+                    style: subHeader,
+                    textAlign: TextAlign.justify,
+                  )
+                ],
+              ),
+            ),
           )),
     );
   }
